@@ -1,0 +1,37 @@
+[debug] [2021-02-25T07:14:47.682Z] ----------------------------------------------------------------------
+[debug] [2021-02-25T07:14:47.685Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\danny\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2021-02-25T07:14:47.685Z] CLI Version:   9.4.0
+[debug] [2021-02-25T07:14:47.685Z] Platform:      win32
+[debug] [2021-02-25T07:14:47.685Z] Node Version:  v14.15.5
+[debug] [2021-02-25T07:14:47.687Z] Time:          Thu Feb 25 2021 02:14:47 GMT-0500 (Eastern Standard Time)
+[debug] [2021-02-25T07:14:47.687Z] ----------------------------------------------------------------------
+[debug] [2021-02-25T07:14:47.687Z] 
+[debug] [2021-02-25T07:14:47.696Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-02-25T07:14:47.697Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project clone-ef0ad. This may result in unexpected behavior. 
+[debug] [2021-02-25T07:14:47.733Z] [hub] writing locator at C:\Users\danny\AppData\Local\Temp\hub-clone-ef0ad.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub\u001b[22m"}}
+[warn] !  Your requested "node" version "12" doesn't match your global version "14" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"12\" doesn't match your global version \"14\""}}
+[debug] [2021-02-25T07:14:47.793Z] defaultcredentials: writing to file C:\Users\danny\AppData\Roaming\firebase\danielgirma9_gmail_com_application_default_credentials.json
+[debug] [2021-02-25T07:14:47.796Z] Setting GAC to C:\Users\danny\AppData\Roaming\firebase\danielgirma9_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\danny\\AppData\\Roaming\\firebase\\danielgirma9_gmail_com_application_default_credentials.json"}}
+[debug] [2021-02-25T07:14:47.801Z] > refreshing access token with scopes: []
+[debug] [2021-02-25T07:14:47.803Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-02-25T07:14:48.033Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 25 Feb 2021 07:14:47 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-25T07:14:48.050Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-ef0ad/adminSdkConfig [none]
+[debug] [2021-02-25T07:14:48.361Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-ef0ad/adminSdkConfig 200
+[debug] [2021-02-25T07:14:48.362Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-ef0ad/adminSdkConfig {"projectId":"clone-ef0ad","storageBucket":"clone-ef0ad.appspot.com"}
+[warn] !  ui: Emulator UI unable to start on port 4000, starting on 4001 instead. {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI unable to start on port 4000, starting on 4001 instead."}}
+[debug] [2021-02-25T07:14:48.483Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-02-25T07:14:48.484Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2021-02-25T07:14:48.484Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\danny\\.cache\\firebase\\emulators\\ui-v1.4.1\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\danny\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.4.1\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2021-02-25T07:14:48.871Z] Web / API server started at http://localhost:4001
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at http://localhost:4001\n"}}
+[info] i  functions: Watching "C:\Users\danny\Desktop\Danny Html\projects\amazonClone\Amazon-clone\amazon-clone\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\danny\\Desktop\\Danny Html\\projects\\amazonClone\\Amazon-clone\\amazon-clone\\functions\" for Cloud Functions..."}}
+[debug] [2021-02-25T07:14:49.081Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
+[debug] [2021-02-25T07:14:49.083Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=1"}}
+[debug] [2021-02-25T07:14:49.085Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
+[debug] [2021-02-25T07:14:49.087Z] [worker-~diagnostic~-0ef13b0a-d4f3-48a2-bc3c-93dd9189c661]: Assigning socketPath: \\?\pipe\C:\Users\danny\Desktop\Danny Html\projects\amazonClone\Amazon-clone\amazon-clone\functions\1344 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-0ef13b0a-d4f3-48a2-bc3c-93dd9189c661]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\danny\\Desktop\\Danny Html\\projects\\amazonClone\\Amazon-clone\\amazon-clone\\functions\\1344"}}
+[debug] [2021-02-25T07:14:49.088Z] [worker-~diagnostic~-0ef13b0a-d4f3-48a2-bc3c-93dd9189c661]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-0ef13b0a-d4f3-48a2-bc3c-93dd9189c661]: BUSY"}}
