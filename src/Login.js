@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { db, auth } from "./Firebase";
+import { db, auth } from "./firebase";
 import "./Login.css";
 const Login = () => {
 	const history = useHistory();
