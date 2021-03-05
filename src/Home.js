@@ -12,6 +12,29 @@ const Home = () => {
 					/>
 					<div className="home__row">
 						<Product
+							id="3"
+							title="Ethiopian Christian art Christ in Glory Ethiopian Cross T-Shirt"
+							price={15.99}
+							rating={4}
+							image="https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91Etdp5vzbL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
+						/>
+						<Product
+							id="4"
+							title="Dior Sauvage for Men Eau De Toilette, 3.4 Fl Oz"
+							price={110.25}
+							rating={5}
+							image="https://images-na.ssl-images-amazon.com/images/I/61NU2vszYVL._SX466_.jpg"
+						/>
+						<Product
+							id="5"
+							title="Citizen Watches BU0054-52L Calendrier"
+							price={314.01}
+							rating={4}
+							image="https://images-na.ssl-images-amazon.com/images/I/81Ml8NQYfYL._AC_UX679_.jpg"
+						/>
+					</div>
+					<div className="home__row">
+						<Product
 							id="12321341"
 							title="RAK Magnetic Pickup Tool with LED Lights - Telescoping Magnet Pick Up Gadget Tool for Men, DIY Handyman, Father/Dad, Husband, Boyfriend, Him, Women"
 							price={16.99}
