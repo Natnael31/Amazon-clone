@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
-import { db, auth } from "./firebase";
+import { Link, useNavigate } from "react-router-dom";
+import { db, auth } from "./Firebase";
 import "./Login.css";
 const Login = () => {
-	const history = useHistory();
+	const history = useNavigate();
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const signIn = (e) => {
@@ -11,7 +11,7 @@ const Login = () => {
 		auth
 			.signInWithEmailAndPassword(email, password)
 			.then((auth) => {
-				history.push("/");
+				history("/");
 			})
 			.catch((error) => alert(error.message));
 	};
@@ -20,8 +20,9 @@ const Login = () => {
 		auth
 			.createUserWithEmailAndPassword(email, password)
 			.then((auth) => {
+				console.log(auth);
 				if (auth) {
-					history.push("/");
+					history("/");
 				}
 			})
 			.catch((error) => alert(error.message));
@@ -53,6 +54,7 @@ const Login = () => {
 					/>
 
 					<button
+						id="sign_in"
 						type="submit"
 						onClick={signIn}
 						className="login__signInButton"
@@ -67,7 +69,7 @@ const Login = () => {
 					Interest-Based Ads Notice.
 				</p>
 
-				<button onClick={register} className="login__registerButton">
+				<button id="register" onClick={register} className="login__registerButton">
 					Create your Amazon Account
 				</button>
 			</div>

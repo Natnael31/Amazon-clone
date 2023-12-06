@@ -25,3 +25,11 @@
 	font-size: 17px;
 	font-weight: 800;
 }
+#remove_from_basket:hover {
+	transform: scale(1.05);
+	cursor: pointer; 
+	transition:  0.2s;
+  }
+#remove_from_basket:active {
+	transform: scale(0.9); 
+  }

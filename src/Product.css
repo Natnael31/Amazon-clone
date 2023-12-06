@@ -39,3 +39,12 @@
 .product:hover {
   transform: scale(1.05);
 } 
+#add_to_basket:hover{
+cursor: pointer;
+transform: scale(1.05);
+transition: 0.2s;
+}
+#add_to_basket:active {
+  transform: scale(0.9); 
+  
+}

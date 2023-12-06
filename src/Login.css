@@ -59,3 +59,19 @@
   margin-top: 10px;
   border-color: darkgray;
 }
+#sign_in:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  transition:  0.2s;
+}
+#register:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  transition:  0.2s;
+}
+#sign_in:active {
+  transform: scale(0.9); 
+}
+#register:active {
+  transform: scale(0.9); 
+}

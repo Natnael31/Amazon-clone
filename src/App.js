@@ -2,62 +2,82 @@ import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
 import Checkout from "./Checkout";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./Login";
 import { useStateValue } from "./StateProvider";
 import { useEffect } from "react";
-import { auth } from "./firebase";
+import { auth } from "./Firebase";
 import Payment from "./Payment";
-import { loadStripe } from '@stripe/stripe-js'
-import { Elements } from '@stripe/react-stripe-js'
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./Orders";
 const promise = loadStripe(
-	'pk_test_51IOFapDqGqBsecWeLHztnQJoc4tHB48nlRT5KFidt7wnPEwHTNsVM748YL6zamMNQhAIP80swGsDPUSTEdx7RoDp00Ci6oUs2p'
+  "pk_test_51MM9EEJpNiJXYvG3paRJctewO6ZeOw6a54FpPZFZ6pfOW0mGP0Eask7wvzmss9YK2hSxHMtGoNPoa0OzLS9NpRrS001aTcgkQV"
 );
 function App() {
-	const [{user}, dispatch] = useStateValue();
-	useEffect(() => {
-		auth.onAuthStateChanged((authUser) => {
-			if (authUser) {
-				dispatch({
-					type: "SET_USER",
-					user: authUser,
-				});
-			} else {
-				dispatch({
-					type: "SET_USER",
-					user: null,
-				});
-			}
-		});
-	}, []);
-	return (
-		<Router>
-			<div className="App">
-				<Route exact path="/">
-					<Header />
-					<Home />
-				</Route>
-				<Route exact path="/Checkout">
-					<Header />
-					<Checkout />
-				</Route>
-				<Route exact path="/orders">
-					<Header />
-					<Orders />
-				</Route>
-				<Route exact path="/login">
-					<Login />
-				</Route>
-				<Route exact path="/payment">
-					<Header />
-					<Elements stripe={promise}>
-						<Payment />
-					</Elements>
-				</Route>
-			</div>
-		</Router>
-	);
+  const [{ user }, dispatch] = useStateValue();
+  useEffect(() => {
+    auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        dispatch({
+          type: "SET_USER",
+          user: authUser, // if there is a logged in user set the user state to authUser
+        });
+      } else {
+        dispatch({
+          type: "SET_USER",
+          user: null,// if there is no authUser set the user state to null
+        });
+      }
+    });
+  }, []);
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <Home />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/Checkout"
+            element={
+              <>
+                <Header />
+                <Checkout />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/orders"
+            element={
+              <>
+                <Header />
+                <Orders />
+              </>
+            }
+          ></Route>
+          <Route path="/login" element={<Login />} />
+          <Route         
+            path="/payment"
+            element={
+              <>
+                <Header />
+                <Elements stripe={promise}>
+                  <Payment />
+                </Elements>
+              </>
+            }
+          ></Route>
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
