@@ -61,6 +61,7 @@ ASUS ZenBook Duo UX481 Laptop, 14” FHD NanoEdge Bezel Touch, Intel Core i7-105
 						/>
 					</div>
 				</div>
+				<h1 id="developer">Developed by Natnael Gashaw</h1>
 			</div>
 		);
 }

@@ -16,6 +16,7 @@ const Product = ({ id, title, price, image, rating }) => {
         });
     }
 	return (
+        <>
 		<div className="product">
 			<div className="product__info">
                 {/* <p>title</p> */}
@@ -40,6 +41,8 @@ const Product = ({ id, title, price, image, rating }) => {
 			/>
 			<button id="add_to_basket" onClick={addToBasket}>Add to Basket</button>
 		</div>
+        
+        </>
 	);
 };
 
